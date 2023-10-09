@@ -2,7 +2,7 @@
 
 ## Prerequisits 
 Before running the project for the first time run the following command.
-- This is tested on ** Python 3.10.11 **
+- This is tested on **Python 3.10.11**
 ```
 pip install -r requirements.txt
 ```
