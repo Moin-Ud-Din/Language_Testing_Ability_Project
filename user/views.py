@@ -15,6 +15,7 @@ import json, ast
 from django.core.mail import send_mail
 from django.conf import settings
 import random
+
 def get_csrf_token(request):
     token = get_token(request)
     return JsonResponse({'csrfToken': token})
@@ -91,10 +92,12 @@ def count_cv(request):
         else:
             cv_count = 0
         return JsonResponse({"cv_count": cv_count})
+    
 def user_count(request):
     if request.method=='GET':
         total_users = User.objects.count()
         return JsonResponse({"total_users": total_users})
+    
 @csrf_exempt
 def add_user(request):
     if request.method == 'POST':
